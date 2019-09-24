@@ -206,6 +206,10 @@
     else {
         [self verticallyLayoutSubviews];
     }
+    
+    if (self.titleView.superview == nil) {
+        [self addSubview:self.titleView];
+    }
 }
 
 - (void)sizeToFitSize:(CGSize)size

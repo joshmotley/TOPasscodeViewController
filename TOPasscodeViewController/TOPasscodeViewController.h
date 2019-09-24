@@ -85,6 +85,8 @@ NS_ASSUME_NONNULL_BEGIN
 /** Will show a default 'Cancel' button if rightAccessoryButton is not set. (Default is YES) */
 @property (nonatomic, assign) BOOL allowCancel;
 
+@property (nonatomic, assign) NSString *cancelTitle;
+
 /** Set the type of biometrics for this device to update the title of the biometrics button properly. */
 @property (nonatomic, assign) TOPasscodeBiometryType biometryType;
 
