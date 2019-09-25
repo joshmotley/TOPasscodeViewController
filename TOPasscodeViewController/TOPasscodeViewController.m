@@ -174,7 +174,7 @@
 
     if (!self.rightAccessoryButton && !self.cancelButton) {
         self.cancelButton = [UIButton buttonWithType:UIButtonTypeSystem];
-//        [self.cancelButton setTitle:NSLocalizedString(@"Cancel", @"Cancel") forState:UIControlStateNormal];
+        [self.cancelButton setTitle:@"___________" forState:UIControlStateNormal];
         self.cancelButton.titleLabel.font = buttonFont;
         [self.cancelButton addTarget:self action:@selector(accessoryButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
         // If cancelling is disabled, we hide the cancel button but we still create it, because it can
@@ -451,7 +451,7 @@
     if (self.passcodeView.passcode.length > 0) {
         title = NSLocalizedString(@"Delete", @"Delete");
     } else if (self.allowCancel) {
-        title = NSLocalizedString(self.cancelTitle, self.cancelTitle);
+        title = self.cancelTitle;
     }
     [UIView performWithoutAnimation:^{
         if (title != nil) {
